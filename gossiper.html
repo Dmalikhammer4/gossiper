@@ -21,7 +21,7 @@
         def Sentence():
             NP()
             VP()
-            
+            EMOJI()
 
         def NP():
             np = [[Det, Adj, N],[Det, N],[Adj, PropN], [PropN]]
@@ -34,6 +34,12 @@
             VerbP = random.choice(vp)
             for i in range(len(VerbP)):
                 VerbP[i]()
+
+        def EMOJI():
+            emo = [[emoji1],[emoji2],[emoji3]]
+            EMP = random.choice(emo)
+            for i in range(len(EMP)):
+                EMP[i]()
 
         def Det():
             DET = ['the', 'a', 'some', 'every', 'your', 'one']
@@ -69,7 +75,18 @@
             COMP = ['that']
             print(random.choice(COMP), end=' ')
 
-       
+        def emoji1():
+            em = ['😀', '😁', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😎', '😍', '😘', '😗']
+            print(random.choice(em), end=' ')
+
+        def emoji2():
+            em = ['🙃', '😉', '😭', '😱','🥲','🤪','😝','🤭','🫢','🫣','🤫','🤐','🤨','😐','😶']
+            print(random.choice(em), end=' ')
+
+        def emoji3():
+            em = ['🙊', '🙈','🐊','🔥','❤️‍🔥', '#GoGators']
+            print(random.choice(em), end=' ')
+
         gossip = str(Sentence())
 
         print(gossip[:-4])
