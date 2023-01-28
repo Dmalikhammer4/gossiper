@@ -16,7 +16,63 @@
     <h2>Explore the Unknown by getting your daily dose of a juicy drama from the Swamp!</h2>
     
     <py-script>
-        
+        import random
+
+        def Sentence():
+            NP()
+            VP()
+            
+
+        def NP():
+            np = [[Det, Adj, N],[Det, N],[Adj, PropN], [PropN]]
+            NounP = random.choice(np)
+            for i in range(len(NounP)):
+                NounP[i]()
+
+        def VP():
+            vp = [[Vi],[Vt, NP],[Vc, Comp, Sentence],[Vc, Comp, Sentence]]
+            VerbP = random.choice(vp)
+            for i in range(len(VerbP)):
+                VerbP[i]()
+
+        def Det():
+            DET = ['the', 'a', 'some', 'every', 'your', 'one']
+            print(random.choice(DET), end=' ')
+
+        def Adj():
+            ADJ = ['crazy','lucky', 'young', 'corny', 'confused', 'drunk', 'dope', 'cool', 'hangry', 'angry', 'jealous',
+                  'curious', 'wicked', 'wild', 'queer', 'flaky','dirty', 'dumb']
+            print(random.choice(ADJ), end=' ')
+
+        def N():
+            NOUN = ['girl', 'boy', 'BFF', 'student', 'roommate']
+            print(random.choice(NOUN), end=' ')
+
+        def PropN():
+            PROPN = ['chatGPT', 'Jared', 'Susan', 'Mike', 'Dan', 'Ethan', 'Gator', 'Albert', 'Alberta','Karen','Grace',
+                    'Tasha','Tanya','Carlos', 'Isabel','Julio','Jose','Naomi','Kali','Fang', 'Li','Yan']
+            print(random.choice(PROPN), end=' ')
+
+        def Vi():
+            VI = ['cursed', 'rocks', 'laughs', 'cried', 'disappeared', 'lied', 'parties', 'screamed','smiled']
+            print(random.choice(VI), end=' ')
+
+        def Vt():
+            VT = ['loves', 'hates', 'betrayed', 'cheated on', 'beated', 'kissed', 'snapped at', 'yeeted']
+            print(random.choice(VT), end=' ')
+
+        def Vc():
+            VC = ['says', 'thinks', 'believes', 'told', 'guessed', 'witnessed', 'lied']
+            print(random.choice(VC), end=' ')
+
+        def Comp():
+            COMP = ['that']
+            print(random.choice(COMP), end=' ')
+
+       
+        gossip = str(Sentence())
+
+        print(gossip[:-4])
     </py-script>
 
 </body>
