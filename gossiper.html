@@ -45,39 +45,39 @@ We used this method to create a fun program that generates random gossip-like me
         <button onClick="window.location.reload();">Refresh for a Fresh Gossip ❤️‍🔥  🙊 </button>
     </div>
 	
-    <py-script>
-	# import libraries
+     <py-script>
+
         import random
 
-	# creating a main function that calls phrase functions 
+        # creating a main function that calls phrase functions
         def Sentence():
             NP()
             VP()
             EMOJI()
-	
-	# crating a noun phrase function with a random noun call
+
+        # creating a noun phrase function with a random noun call
         def NP():
             np = [[Det, Adj, N],[Det, N],[Adj, PropN], [PropN]]
             NounP = random.choice(np)
             for i in range(len(NounP)):
                 NounP[i]()
 
-	# crating a verb phrase function with a random verb call
+        # creating a verb phrase function with a random verb call
         def VP():
             vp = [[Vi],[Vt, NP],[Vc, Comp, Sentence],[Vc, Comp, Sentence]]
             VerbP = random.choice(vp)
             for i in range(len(VerbP)):
                 VerbP[i]()
 
-	# crating an emoji function with a random emoji call
+        # creating an emoji function with a random emoji call
         def EMOJI():
             emo = [[emoji1],[emoji2],[emoji3]]
             EMP = random.choice(emo)
             for i in range(len(EMP)):
                 EMP[i]()
-	
-	# creating word class functions
-	
+
+        # creating word class functions
+
         def Det():
             DET = ['the', 'a', 'some', 'every', 'your', 'one']
             print(random.choice(DET), end=' ')
@@ -126,7 +126,9 @@ We used this method to create a fun program that generates random gossip-like me
 
         gossip = str(Sentence())
 
-        print(gossip[:-4]) # removing the last 4 characters to get rid of "None"
+        print(gossip[:-4])
+
+
     </py-script>
 
 </body>
